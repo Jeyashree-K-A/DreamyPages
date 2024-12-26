@@ -1,0 +1,452 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-bar {
+    background-color: #121D33;
+}
+
+.logo {
+    text-align: center;
+}
+
+.logo img {
+    width: 120px;
+    height: auto;
+}
+
+.title {
+    font-family: "Cinzel", serif;
+    color: #c69c6d;
+    font-size: x-large;
+    font-weight: 600;
+}
+
+.menus {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.menus ul {
+    word-spacing: 22px;
+    font-size: 22px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.menus ul li {
+    list-style-type: none;
+    display: inline-block;
+    /*font-family: "Cormorant Garamond", serif;*/
+    font-family: "Cinzel", serif;
+    font-weight: 600;
+    font-style: normal;
+
+}
+
+.menus ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.menus ul li a:hover {
+    color: #d7a4b7;
+    text-decoration: underline overline;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.bg-img {
+    background-image: url(../project/images/cozy_library.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+
+.tag-line {
+    position: absolute;
+    color: white;
+    top: 40%;
+    left: 35%;
+    ;
+}
+
+.tag-line h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 42px;
+    transition: all 0.3s ease-in-out;
+}
+
+.tag-line h2:hover {
+    font-size: 48px;
+    /* Increases font size on hover */
+    color: #FFD700;
+}
+
+.tag-line h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+    margin: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.tag-line h3:hover {
+    font-size: 25px;
+    color: #FFD700;
+}
+
+.genres {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.genre-block {
+    background-color: #fff;
+    border: 2px solid #c69c6d;
+    padding: 20px;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.genre-block img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.genre-block h3 {
+    font-family: "Cinzel", serif;
+    font-size: 1.5rem;
+    color: #2e3b55;
+    margin-top: 10px;
+}
+
+.genre-block:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(194, 156, 109, 0.6);
+}
+
+.genre-block h3:hover {
+    color: #d7a4b7;
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #2e3b55;
+    color: #f1e2d2;
+    padding: 40px 0;
+    /*font-family: "Cormorant Garamond", serif;*/
+    text-align: center;
+}
+
+.about h4 {
+    font-family: "Cinzel", serif;
+    font-size: 20px;
+}
+
+.news h4 {
+    margin-top: 15px;
+    font-family: "Cinzel", serif;
+    font-size: 20px;
+}
+
+.news h5 {
+    font-size: 20px;
+}
+
+.social-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-icon {
+    text-decoration: none;
+    color: #e0dede;
+    font-size: 28px;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #ffcc66;
+}
+
+
+.rights p {
+    margin-top: 20px;
+}
+
+/*Genre page*/
+
+.genre-page {
+    background-color: #e4dfe8;
+}
+
+.fonts {
+    text-align: center;
+}
+
+.fonts h2 {
+    color: #4a3221;
+    font-size: x-large;
+    margin-bottom: 10px;
+    font-family: "Cinzel", serif;
+}
+
+.fonts h2:hover {
+    font-size: 30px;
+    color: #b39bc8;
+}
+
+.fonts h3 {
+    color: #4a3221;
+    font-size: 20px;
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+}
+
+.bg-ground {
+    background-color: #d8dbe3;
+    border: 1px solid #c1bebe;
+}
+
+.scrollable-gallery {
+    width: 60%;
+    margin: auto;
+    padding: 20px;
+    background-color: #f8f6ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.genre-title {
+    text-align: center;
+    font-family: "Cinzel", serif;
+    font-size: 2em;
+    color: #333366;
+    margin-bottom: 20px;
+    background-color: beige;
+}
+
+.gallery-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding-bottom: 20px;
+    scrollbar-width: thin;
+    scrollbar-color: #d4c5ff #f8f6ff;
+}
+
+.gallery-slide {
+    flex: 0 0 100%;
+    display: flex;
+    align-items: center;
+    scroll-snap-align: start;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.book-image img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-left: 20px;
+}
+
+
+.book-info {
+    width: 650px;
+    padding: 20px;
+}
+
+.book-info h3 {
+    font-size: 1.8em;
+    color: #333366;
+    margin-bottom: 10px;
+    font-family: "Cinzel", serif;
+}
+
+.book-info p {
+    font-size: 1em;
+    color: #444;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    font-family: "poppins", sans-serif;
+    font-style: italic;
+}
+
+.buy-link {
+    display: inline-block;
+    background-color: #6c5ce7;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.buy-link:hover {
+    background-color: #5a4dbc;
+}
+
+
+/* Scrollbar Styling for Chrome */
+/*.gallery-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.gallery-container::-webkit-scrollbar-track {
+    background: #f8f6ff;
+    border-radius: 10px;
+}
+
+.gallery-container::-webkit-scrollbar-thumb {
+    background-color: #d4c5ff;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.gallery-container::-webkit-scrollbar-thumb:hover {
+    background-color: #aea8ff;
+}
+*/
+
+/* top-picks page
+
+.top-picks {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #eadcdc;
+}
+
+.section-title {
+    font-family: "Cinzel", serif;
+    font-size: 2rem;
+    color: #2e3b55;
+    margin-bottom: 20px;
+}
+
+.top-picks-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 250px; 
+    height: 400px; 
+    perspective: 1000px;
+    border: 2px solid #c69c6d;
+    border-radius: 15px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: #fff;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px rgba(194, 156, 109, 0.6);
+    transition: box-shadow 0.3s ease;
+}
+
+.flip-card-front h3 {
+    position: relative;
+    margin-top: 10px;  
+    font-family: "Cinzel", serif;
+    font-size: 1rem;
+    color: #2e3b55; 
+    text-align: center; 
+    padding: 0 10px; 
+}
+
+
+.flip-card-front img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.flip-card-front img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: contain; 
+    border-radius: 15px; 
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+    background-color: #e8e0ff;
+    padding: 15px;
+    text-align: center;
+    color: #333366;
+}
+
+.flip-card-back p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.buy-link {
+    display: inline-block;
+    background-color: #6c5ce7;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.buy-link:hover {
+    background-color: #5a4dbc;
+}
+*/

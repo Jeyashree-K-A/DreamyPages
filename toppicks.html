@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top picks</title>
+    <link rel="icon" href="../project/images/icon.jpeg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!--<link rel="stylesheet" href="home.css">-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Cormorant+Garamond:ital,
+        wght@0,400;0,500;0,600;0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+        }
+
+        .nav-bar {
+            background-color: #121D33;
+        }
+
+        .logo {
+            text-align: center;
+        }
+
+        .logo img {
+            width: 120px;
+            height: auto;
+        }
+
+        .title {
+            font-family: "Cinzel", serif;
+            color: #c69c6d;
+            font-size: x-large;
+            font-weight: 600;
+        }
+
+        .menus {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .menus ul {
+            word-spacing: 22px;
+            font-size: 22px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        .menus ul li {
+            list-style-type: none;
+            display: inline-block;
+            /*font-family: "Cormorant Garamond", serif;*/
+            font-family: "Cinzel", serif;
+            font-weight: 600;
+            font-style: normal;
+
+        }
+
+        .menus ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .menus ul li a:hover {
+            color: #d7a4b7;
+            text-decoration: underline overline;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .bg-img {
+            background-image: url(../project/images/cozy_library.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+
+        /* General Section Styling */
+        body {
+            background: linear-gradient(to bottom, #f8f6ff, #e6e2ff);
+        }
+
+        .flip-card-section {
+            text-align: center;
+            padding: 25px 20px;
+            margin-bottom: 40px;
+        }
+
+        .flip-card-section a {
+            text-decoration: none;
+        }
+
+        .flip-card-section h4 {
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        h2 {
+            color: #333366;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-family: "cinzel", serif;
+            ;
+        }
+
+        /* Flip Card Container */
+        .flip-card-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin: 0 auto;
+            width: 1200px;
+        }
+
+        /* Flip Card Styling */
+        .flip-card {
+            background-color: transparent;
+            width: 220px;
+            height: 350px;
+            perspective: 1000px;
+
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .flip-card-front {
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid #d4c5ff;
+        }
+
+        .flip-card-front img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .flip-card-back {
+            background: #4e4b68;
+            color: #fff;
+            transform: rotateY(180deg);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            font-size: 1em;
+            font-family: "Poppins", sans-serif;
+            font-style: italic;
+        }
+
+        .book-title {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .book-summary {
+            font-size: 0.9em;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .buy-link {
+            background-color: #ff9ff3;
+            color: #333;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .buy-link:hover {
+            background-color: #f368e0;
+        }
+
+        .flip-card:hover {
+            box-shadow: 0 0 15px #d4c5ff, 0 0 30px #a29bfe;
+        }
+
+        /*footer*/
+        footer {
+            background-color: #2e3b55;
+            color: #f1e2d2;
+            padding: 40px 0;
+            /*font-family: "Cormorant Garamond", serif;*/
+            text-align: center;
+        }
+
+        .about h4 {
+            font-family: "Cinzel", serif;
+            font-size: 20px;
+        }
+
+        .news h4 {
+            margin-top: 15px;
+            font-family: "Cinzel", serif;
+            font-size: 20px;
+        }
+
+        .news h5 {
+            font-size: 20px;
+        }
+
+        .social-links {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            text-decoration: none;
+            color: #e0dede;
+            font-size: 28px;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icon:hover {
+            color: #ffcc66;
+        }
+
+        .rights p {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-bar">
+            <div class="logo">
+                <img src="../project/images/trail.jpg" alt="Dreamy Pages Logo">
+                <div class="title">
+                    Dreamy Pages
+                </div>
+            </div>
+            <div class="menus">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="genres.html">Genres</a></li>
+                    <li><a href="toppicks.html">TopPicks</a></li>
+                    <li><a href="#footer-block">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="flip-card-section">
+        <h2>Top Picks</h2>
+        <h4>Based on <a href="https://www.goodreads.com/" target="_blank">Goodreads</a></h4>
+        <div class="flip-card-container">
+            <!-- Book 1 -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="../project/images/top_picks/book1.jpeg" alt="The House in the Cerulean Sea ">
+                    </div>
+                    <div class="flip-card-back">
+                        <div class="book-title">The House in the Cerulean Sea </div>
+                        <div class="book-summary">
+                            "A magical house, a chosen family, and an ocean of hope."
+                        </div>
+                        <a href="https://www.amazon.in/House-Cerulean-Sea-TikTok-made/dp/1529087945/ref=sr_1_1?crid=1XSSSHYTR5T6F&dib=eyJ2IjoiMSJ9.aCzNqY7zjuIeTSeumUnTV73d6LRNfI2bV8w16aP2-C1vqErgCSzcPBoHC0ERiZOr8ZylKQZmtDiqbd8L0a3-KITFrnpJcGGxfzAoS8Gct8r5ahVpccUy9yh_nNhF697UAJ0abCmOAtXuDFPZ3YhJx-L9321FxlChW1U8Klt_0laFCdC8mk5Pkwg8FD1SQsT5b4SdvUJSCXl_d2tDJfjKFT2_s10_vB-cvhScZWuJ1aw.MNpaZRc7O1sk_cXdOyoD1VHxSPirrlGhQbKP1uFKhsY&dib_tag=se&keywords=The+House+in+the+Cerulean+Sea&nsdOptOutParam=true&qid=1734535995&s=books&sprefix=the+house+in+the+cerulean+sea%2Cstripbooks%2C431&sr=1-1"
+                            target="_blank" class="buy-link">Buy on Amazon</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 2 -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="../project/images/top_picks/book2.jpeg" alt="Anne of Green Gables ">
+                    </div>
+                    <div class="flip-card-back">
+                        <div class="book-title">Anne of Green Gables</div>
+                        <div class="book-summary">
+                            "Where imagination turns a small town into a big adventure."
+                        </div>
+                        <a href="https://www.amazon.in/Anne-Green-Gables-Puffin-Bloom/dp/0147514002/ref=sr_1_3?crid=20QATHZCJFBSE&dib=eyJ2IjoiMSJ9.Z62pqcaZzfwCn_eYaIqPI4xB5kcFEqwXx5h-nt6Bgafh5jbA2ZI1gpATrw1PzQP5NpWb-UZw6sFAnLTXwDnH0AM6WyIlx71BGarx46EMkccDRjLmrcnbbBsa0xKvvRxyHIswsygPlL8UlYFkF7kCnC7te02u1v8HHbDX5hcatzugI9YWWKnmTv3fiq9XGg3uL3LwGoAYYpKG6r46jpY8lp5p0P6YBaVid2iYjzTis-4.7qMCxUzX2iaQQGLqQYMdkGs7DnbGPHlsS_fjmSC4gW0&dib_tag=se&keywords=anne+of+green+gables+l.m.+montgomery&qid=1734535526&sprefix=anne+of+green+gables+l.m.+montgomery%2Caps%2C248&sr=8-3"
+                            target="_blank" class="buy-link">Buy on Amazon</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 3 -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="../project/images/top_picks/book3.jpeg" alt="Howl’s Moving Castle">
+                    </div>
+                    <div class="flip-card-back">
+                        <div class="book-title">Howl’s Moving Castle</div>
+                        <div class="book-summary">
+                            "A wandering castle, a cursed girl, and a wizard full of secrets."
+                        </div>
+                        <a href="https://www.amazon.in/Howls-Moving-Castle-Diana-Wynne/dp/0007299265/ref=sr_1_1?crid=VVOJUH2SWV1M&dib=eyJ2IjoiMSJ9.SjiyDV1LIBV00qn3Qwy6UGHO_CL4nYWb3b1WZPwp2qsD4rXmUXgb7eFEOYeEfUXrzz0Uk9s-7_buCl1IuivRyzlydOIqHwBxFBFxQHkfuQx0uM-3KK4Cyv1PfSYHOrBeA4I_cj8O-yRVaVqTs9kCPhfEH09rLv_cMyWZ-GDzeGDMTOEah1ZqwW66cTgHWdvFl2mfNZGv0oKL0OgxRuhqcPTRNsq8z7LZgePKH-PDrGk.Tl9hffY2IijEX4wnQDI0ILSPmhvnduldncZdXu45YTQ&dib_tag=se&keywords=Howl%E2%80%99s+Moving+Castle&qid=1734535696&sprefix=howl+s+moving+castle%2Caps%2C235&sr=8-1"
+                            target="_blank" class="buy-link">Buy on Amazon</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 4 -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="../project/images/top_picks/book4.jpeg" alt="The Bear and the Nightingale">
+                    </div>
+                    <div class="flip-card-back">
+                        <div class="book-title">The Bear and the Nightingale</div>
+                        <div class="book-summary">
+                            "A winter tale of courage, magic, and forgotten gods."
+                        </div>
+                        <a href="https://www.amazon.in/Bear-Nightingale-Winternight-Trilogy/dp/1785031058/ref=sr_1_1?crid=3PUVM0MX1KSTH&dib=eyJ2IjoiMSJ9.cqUf6lvavvVACzRXf_ZX7XczY7ewhaY-n6e68e7GdDvBrcpfiXKejbZmvDqjU8UOddQPJJ-EL65W3F-Em5dESFJkjLsrnxGuDeahoXFgcl5DN-bheEyHyWeg9eK6R2ciIcyCBJWo97XEpqttZtmFpgyZqcJqYv7gab35meipp8nLZ3ouexUDlmmZmnF2UtYT.RO77J4MMvBfODQKLdC1rh24gsa_kqzWq1xmwoYIE1so&dib_tag=se&keywords=The+Bear+and+the+Nightingale&qid=1734535800&sprefix=the+bear+and+the+nightingale%2Caps%2C261&sr=8-1"
+                            target="_blank" class="buy-link">Buy on Amazon</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 5 -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="../project/images/top_picks/book5.jpeg" alt="The Secret Garden">
+                    </div>
+                    <div class="flip-card-back">
+                        <div class="book-title">The Secret Garden</div>
+                        <div class="book-summary">
+                            "Unlock the garden, and let healing begin."
+                        </div>
+                        <a href="https://www.amazon.in/Paperback-Transformation-Friendship-Teenagers-Storybooks/dp/9362632888/ref=sr_1_1_sspa?crid=11FG04SK7Q6Q1&dib=eyJ2IjoiMSJ9.eyw1ZLWyu-pbeY2Uqn_hkde9HLhZSCLVH-u_AZJaTiRVYdlUqCw2ripLGtqU6Mq0Q9enb0l8c2SWxLBBtF8nTsOF0JtARDYFHq_1uKuoGNmTDQsdrNDIeECVudfKn4Z2fUwa3FhwqFyxIHAb4B1Uf3NXj0QZKzf-YbpAMZQtn5op6eHIHaVuQjWgApxXeYMEZVslsACqZC03oN30ZjA5A_0o3rSlXb5eKTGUaeMw_u8.CIyIHI8Gt9zTa9mnP_4Mw-1qOUnOEFtTir4uXAkkXQ0&dib_tag=se&keywords=The+Secret+Garden&qid=1734535887&sprefix=the+secret+garden%2Caps%2C245&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1"
+                            target="_blank" class="buy-link">Buy on Amazon</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer-block">
+        <div class="footer">
+            <div class="about">
+                <h4>About Dreamy Pages</h4>
+                <p>Dreamy Pages is a cozy nook for book lovers to discover, share, and celebrate the
+                    magic of literature. Join us as we explore the world of stories, genres, and reading challenges.
+                </p>
+            </div>
+            <div class="news">
+                <h4>Join our Book Club</h4>
+                <p>Email : dreamypages@gmail.com</p>
+            </div>
+
+            <div class="social-links">
+                <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.pinterest.com" target="_blank" class="social-icon">
+                    <i class="fa-brands fa-pinterest"></i>
+                </a>
+                <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </div>
+
+            <div class="rights">
+                <p>© 2024 Dreamy Pages.</p>
+            </div>
+        </div>
+    </footer>
+</body>
