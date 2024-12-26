@@ -63,7 +63,7 @@ nav {
 }
 
 .bg-img {
-    background-image: url(../project/images/cozy_library.jpeg);
+    background-image: url(./images/cozy_library.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
