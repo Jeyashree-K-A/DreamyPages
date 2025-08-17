@@ -7,4 +7,3 @@ I'm a 2nd-year Computer Science student with a passion for building creative web
 
 This project was built using HTML and CSS.
 
-Check out the live site here: https://jeyashree30.github.io/DreamyPages/
